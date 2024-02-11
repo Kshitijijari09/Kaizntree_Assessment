@@ -1,0 +1,43 @@
+Solutions to the assessment 
+
+1. Bug 1: Select dropdown doesn't scroll with rest of the page
+
+-> I fixed this bug by changing the position of the dropdown container from 'fixed' to 'absolute'. This way, it will now 
+scroll along with the rest of the page.
+
+2. Bug 2: Approve checkbox not working
+
+-> Fixed this bug as there was a <label> as a separate component which was getting triggered instead of the checkbox. So I 
+moved the className to Input component of checkBox. Now it works fine.
+
+3. Bug 3: Cannot select _All Employees_ after selecting an employee
+
+-> Fixed this bug by loading all the employees when selected All employees as it was setting to null handled it with a if condition and
+loaded the employees in the App.tsx
+
+
+4.Clicking on View More button not showing correct data
+
+->  FIxed this bug by appending the new set of data to the old and loading it together and displaying it.
+
+
+5.Employees filter not available during loading more data
+ Part 1:
+ -> This bug was a tricky one to understand I had to come up with a plan where once the employees load it is not supposed to load again 
+ and for this I setLoading to false after the employees are loaded which provides us the expected result
+
+ Part 2:
+ -> The bove solutions helped me fix this bug as well
+
+ 6. Bug 6: View more button not working as expected
+ Part 1:
+ -> Fixed this bug add a conditions display pagination until the next page is not null
+
+ Part 2:
+ -> The above solution helped me to fix this bug as well
+
+ 7. Bug 7: Approving a transaction won't persist the new value
+
+ -> To fix this bug I had to understand Customfetch or the fakeAPI and by using the fetchWithoutCache I solved this bug.
+
+ Thank you for this opportunity. Looking forward to the possiblity of working together.
